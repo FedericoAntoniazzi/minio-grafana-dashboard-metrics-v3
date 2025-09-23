@@ -52,6 +52,19 @@ While this works for many users, there are several reasons you might prefer a Gr
 
 3. Configure the dashboard variables (if needed) to match your environment
 
+## Setup Instructions (Helm)
+
+If installing via Grafana's Helm chart, you can provision the dashboard as follows:
+
+```yaml
+dashboards:
+    minio-v3:
+      url: "https://raw.githubusercontent.com/FedericoAntoniazzi/minio-grafana-dashboard-metrics-v3/main/dashboard.json"
+      datasource:
+        - name: DS_PROMETHEUS
+          value: 'YOUR-DATA-SOURCE-NAME'
+```
+
 ## Configuration
 
 This repository is only responsible for the dashboard.
